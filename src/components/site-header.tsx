@@ -31,9 +31,11 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
-        solid
-          ? "bg-background/75 backdrop-blur-xl border-b border-border/40"
-          : "bg-transparent"
+        open
+          ? "bg-transparent"
+          : solid
+            ? "bg-background/75 backdrop-blur-xl border-b border-border/40"
+            : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-6 md:px-12">
