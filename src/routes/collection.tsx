@@ -21,7 +21,7 @@ export const Route = createFileRoute("/collection")({
 function CollectionPage() {
   return (
     <SiteLayout>
-      <section className="bg-background px-6 pb-16 pt-40 md:px-12 md:pt-48">
+      <section className="bg-paper px-6 pb-16 pt-40 md:px-12 md:pt-48">
         <div className="mx-auto max-w-[1500px]">
           <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
             The Collection · 2026
@@ -36,7 +36,7 @@ function CollectionPage() {
         </div>
       </section>
 
-      <section className="bg-background px-6 pb-32 md:px-12">
+      <section className="bg-leaf-mist px-6 pb-32 md:px-12">
         <div className="mx-auto max-w-[1500px]">
           <div className="yui-rule mb-24" />
           <div className="grid gap-x-10 gap-y-24 md:grid-cols-2 md:gap-x-16">

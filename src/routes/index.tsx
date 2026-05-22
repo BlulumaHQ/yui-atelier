@@ -30,7 +30,7 @@ function Home() {
       <HeroSlider />
 
       {/* Eyebrow intro */}
-      <section className="bg-[color:var(--ivory)] px-6 py-28 md:px-12 md:py-36">
+      <section className="bg-paper px-6 py-28 md:px-12 md:py-36">
         <div className="mx-auto max-w-3xl text-center">
           <p className="font-jp text-xs tracking-[0.5em] text-muted-foreground">やさしい時間のために</p>
           <h2 className="mt-8 font-serif text-3xl leading-[1.35] text-foreground md:text-5xl">
@@ -42,7 +42,7 @@ function Home() {
       </section>
 
       {/* Featured Seasonal Collection */}
-      <section className="bg-background px-6 py-28 md:px-12">
+      <section className="bg-leaf-mist px-6 py-28 md:px-12">
         <div className="mx-auto max-w-[1500px]">
           <SectionHeader
             eyebrow="Seasonal Collection"
@@ -79,7 +79,7 @@ function Home() {
       </section>
 
       {/* Signature Cakes — editorial asymmetric */}
-      <section className="bg-[color:var(--cream)] px-6 py-32 md:px-12">
+      <section className="bg-paper-cream px-6 py-32 md:px-12">
         <div className="mx-auto max-w-[1500px]">
           <SectionHeader
             eyebrow="Signature"
@@ -142,7 +142,7 @@ function Home() {
       </section>
 
       {/* About YUI */}
-      <section className="bg-background px-6 py-32 md:px-12">
+      <section className="bg-paper px-6 py-32 md:px-12">
         <div className="mx-auto grid max-w-[1400px] gap-16 md:grid-cols-2 md:gap-24">
           <div className="relative">
             <img
@@ -177,7 +177,7 @@ function Home() {
       </section>
 
       {/* Philosophy */}
-      <section className="bg-[color:var(--sakura)]/40 px-6 py-32 text-center md:px-12">
+      <section className="bg-paper-sakura px-6 py-32 text-center md:px-12">
         <div className="mx-auto max-w-3xl">
           <p className="font-jp text-xs tracking-[0.5em] text-foreground/70">
             スローリビング
@@ -204,7 +204,7 @@ function Home() {
       </section>
 
       {/* Instagram Showcase */}
-      <section className="bg-background px-6 py-28 md:px-12">
+      <section className="bg-leaf-mist px-6 py-28 md:px-12">
         <div className="mx-auto max-w-[1500px]">
           <div className="flex flex-col items-end justify-between gap-4 md:flex-row md:items-end">
             <div>
@@ -246,7 +246,7 @@ function Home() {
       </section>
 
       {/* Ordering / CTA */}
-      <section className="relative overflow-hidden bg-foreground px-6 py-32 text-background md:px-12">
+      <section className="bg-paper-sage relative overflow-hidden px-6 py-32 md:px-12">
         <div className="mx-auto grid max-w-[1300px] gap-16 md:grid-cols-2">
           <div>
             <p className="text-[10px] uppercase tracking-luxe text-background/60">

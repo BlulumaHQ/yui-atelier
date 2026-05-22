@@ -26,7 +26,7 @@ function GalleryPage() {
   const all = [heart, strawberry, ocean, cherry, ...products.map((p) => p.image)];
   return (
     <SiteLayout>
-      <section className="bg-background px-6 pb-20 pt-40 md:px-12 md:pt-48">
+      <section className="bg-paper px-6 pb-20 pt-40 md:px-12 md:pt-48">
         <div className="mx-auto max-w-[1500px]">
           <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
             Gallery · ギャラリー
@@ -37,7 +37,7 @@ function GalleryPage() {
         </div>
       </section>
 
-      <section className="bg-background px-6 pb-32 md:px-12">
+      <section className="bg-leaf-mist px-6 pb-32 md:px-12">
         <div className="mx-auto max-w-[1500px] columns-1 gap-6 md:columns-3 md:gap-8">
           {all.map((src, i) => (
             <div
