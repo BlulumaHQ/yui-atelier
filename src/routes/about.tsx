@@ -3,8 +3,8 @@ import { SiteLayout } from "@/components/site-layout";
 import bgFoliage from "@/assets/bg-foliage-shadow.jpg";
 import bgWaves from "@/assets/bg-waves.jpg";
 import aboutApron from "@/assets/about-apron.webp";
-import aboutMuscat from "@/assets/about-muscat-purple.webp";
-import aboutStrawberry from "@/assets/about-strawberry-trio.webp";
+import aboutMuscat from "@/assets/about-muscat-purple-sq.webp";
+import aboutStrawberry from "@/assets/about-strawberry-trio-sq.webp";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
