@@ -60,6 +60,7 @@
   --color-lavender: var(--lavender);
   --color-blueberry: var(--blueberry);
   --color-clay: var(--clay);
+  --color-menu-background: var(--menu-background);
   --font-serif: "Cormorant Garamond", "Noto Serif JP", serif;
   --font-sans: "Jost", "Noto Serif JP", system-ui, sans-serif;
   --font-jp: "Noto Serif JP", serif;
@@ -94,6 +95,7 @@
   --sakura: oklch(0.92 0.035 15);
   --cream: oklch(0.965 0.012 80);
   --ivory: oklch(0.985 0.005 70);
+  --menu-background: oklch(1 0 0);
   --sage: oklch(0.62 0.03 130);
   --lavender: oklch(0.82 0.04 295);
   --blueberry: oklch(0.38 0.08 265);

@@ -32,7 +32,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
         open
-          ? "bg-transparent"
+          ? "bg-menu-background"
           : solid
             ? "bg-background/75 backdrop-blur-xl border-b border-border/40"
             : "bg-transparent"
@@ -98,38 +98,35 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
         </div>
       </div>
 
-      {/* Mobile sheet */}
-      <div
-        className={`fixed inset-0 z-50 bg-[color:var(--cream)] transition-opacity duration-500 md:hidden ${
-          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-        }`}
-      >
-        <div className="flex h-20 items-center justify-between px-6">
-          <span className="font-serif text-2xl tracking-[0.4em]">YUI</span>
-          <button onClick={() => setOpen(false)} aria-label="Close">
-            <X className="h-5 w-5" strokeWidth={1.25} />
-          </button>
-        </div>
-        <nav className="flex flex-col items-center gap-8 pt-16">
-          {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="font-serif text-3xl tracking-wide text-foreground"
+      {open && (
+        <div className="fixed inset-0 z-[999] h-dvh w-dvw overflow-y-auto bg-menu-background md:hidden">
+          <div className="flex h-20 items-center justify-between px-6">
+            <span className="font-serif text-2xl tracking-[0.4em] text-foreground">YUI</span>
+            <button onClick={() => setOpen(false)} aria-label="Close" className="text-foreground">
+              <X className="h-5 w-5" strokeWidth={1.25} />
+            </button>
+          </div>
+          <nav className="flex flex-col items-center gap-8 pt-16">
+            {nav.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="font-serif text-3xl tracking-wide text-foreground"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <a
+              href="https://www.instagram.com/yui.living"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 text-[11px] uppercase tracking-editorial text-muted-foreground"
             >
-              {item.label}
-            </Link>
-          ))}
-          <a
-            href="https://www.instagram.com/yui.living"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-8 text-[11px] uppercase tracking-editorial text-muted-foreground"
-          >
-            @yui.living
-          </a>
-        </nav>
-      </div>
+              @yui.living
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
