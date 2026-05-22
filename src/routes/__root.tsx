@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -72,14 +73,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "YUI — Boutique Dessert Studio" },
+      {
+        name: "description",
+        content:
+          "YUI is a boutique Japanese dessert studio — handcrafted mousse cakes, cheesecakes, and seasonal creations made for slow living.",
+      },
+      { name: "author", content: "YUI Pâtisserie Studio" },
+      { property: "og:title", content: "YUI — Boutique Dessert Studio" },
+      {
+        property: "og:description",
+        content: "Handcrafted cakes for quiet moments and beautiful gatherings.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@yui.living" },
     ],
     links: [
       {
@@ -114,6 +122,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Outlet />
+      <Toaster />
     </QueryClientProvider>
   );
 }
