@@ -5,6 +5,7 @@ import heart from "@/assets/hero-heart.webp";
 import strawberry from "@/assets/hero-strawberry.webp";
 import ocean from "@/assets/hero-ocean.webp";
 import cherry from "@/assets/hero-cherry.webp";
+import bgFoliage from "@/assets/bg-foliage-shadow.jpg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -26,8 +27,12 @@ function GalleryPage() {
   const all = [heart, strawberry, ocean, cherry, ...products.map((p) => p.image)];
   return (
     <SiteLayout>
-      <section className="bg-background px-6 pb-20 pt-40 md:px-12 md:pt-48">
-        <div className="mx-auto max-w-[1500px]">
+      <section
+        className="relative bg-background bg-cover bg-center bg-no-repeat px-6 pb-20 pt-40 md:px-12 md:pt-48"
+        style={{ backgroundImage: `url(${bgFoliage})` }}
+      >
+        <div className="absolute inset-0 bg-background/70" />
+        <div className="relative mx-auto max-w-[1500px]">
           <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
             Gallery · ギャラリー
           </p>
