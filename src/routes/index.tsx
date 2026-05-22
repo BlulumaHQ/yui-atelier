@@ -3,6 +3,9 @@ import { SiteLayout } from "@/components/site-layout";
 import { HeroSlider } from "@/components/hero-slider";
 import { products } from "@/lib/products";
 import { Instagram } from "lucide-react";
+import bgFoliage from "@/assets/bg-foliage-shadow.jpg";
+import bgWaves from "@/assets/bg-waves.jpg";
+import bgDark from "@/assets/bg-dark-texture.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,8 +33,12 @@ function Home() {
       <HeroSlider />
 
       {/* Eyebrow intro */}
-      <section className="bg-[color:var(--ivory)] px-6 py-28 md:px-12 md:py-36">
-        <div className="mx-auto max-w-3xl text-center">
+      <section
+        className="relative bg-[color:var(--ivory)] bg-cover bg-center bg-no-repeat px-6 py-28 md:px-12 md:py-36"
+        style={{ backgroundImage: `url(${bgFoliage})` }}
+      >
+        <div className="absolute inset-0 bg-[color:var(--ivory)]/70" />
+        <div className="relative mx-auto max-w-3xl text-center">
           <p className="font-jp text-xs tracking-[0.5em] text-muted-foreground">やさしい時間のために</p>
           <h2 className="mt-8 font-serif text-3xl leading-[1.35] text-foreground md:text-5xl">
             Desserts are more than something sweet — they are part of an atmosphere,
@@ -79,8 +86,12 @@ function Home() {
       </section>
 
       {/* Signature Cakes — editorial asymmetric */}
-      <section className="bg-[color:var(--cream)] px-6 py-32 md:px-12">
-        <div className="mx-auto max-w-[1500px]">
+      <section
+        className="relative bg-[color:var(--cream)] bg-cover bg-center bg-no-repeat px-6 py-32 md:px-12"
+        style={{ backgroundImage: `url(${bgFoliage})` }}
+      >
+        <div className="absolute inset-0 bg-[color:var(--cream)]/85" />
+        <div className="relative mx-auto max-w-[1500px]">
           <SectionHeader
             eyebrow="Signature"
             title="The Lookbook"
@@ -177,8 +188,19 @@ function Home() {
       </section>
 
       {/* Philosophy */}
-      <section className="bg-[color:var(--sakura)]/40 px-6 py-32 text-center md:px-12">
-        <div className="mx-auto max-w-3xl">
+      <section
+        className="relative overflow-hidden bg-[color:var(--sakura)]/40 px-6 py-32 text-center md:px-12"
+        style={{
+          backgroundImage: `url(${bgWaves})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div
+          className="absolute inset-0 bg-[color:var(--sakura)]/55"
+          style={{ mixBlendMode: "multiply" }}
+        />
+        <div className="relative mx-auto max-w-3xl">
           <p className="font-jp text-xs tracking-[0.5em] text-foreground/70">
             スローリビング
           </p>
@@ -246,8 +268,16 @@ function Home() {
       </section>
 
       {/* Ordering / CTA */}
-      <section className="relative overflow-hidden bg-foreground px-6 py-32 text-background md:px-12">
-        <div className="mx-auto grid max-w-[1300px] gap-16 md:grid-cols-2">
+      <section
+        className="relative overflow-hidden bg-foreground px-6 py-32 text-background md:px-12"
+        style={{
+          backgroundImage: `url(${bgDark})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-foreground/70" />
+        <div className="relative mx-auto grid max-w-[1300px] gap-16 md:grid-cols-2">
           <div>
             <p className="text-[10px] uppercase tracking-luxe text-background/60">
               The Ordering Experience
