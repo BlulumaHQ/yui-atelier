@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
-import heart from "@/assets/hero-heart.webp";
-import ocean from "@/assets/hero-ocean.webp";
-import strawberry from "@/assets/product-strawberry-cake.webp";
 import bgFoliage from "@/assets/bg-foliage-shadow.jpg";
 import bgWaves from "@/assets/bg-waves.jpg";
+import aboutApron from "@/assets/about-apron.webp";
+import aboutMuscat from "@/assets/about-muscat-purple.webp";
+import aboutStrawberry from "@/assets/about-strawberry-trio.webp";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -42,7 +42,7 @@ function AboutPage() {
       <section className="bg-background px-6 py-32 md:px-12">
         <div className="mx-auto grid max-w-[1400px] gap-16 md:grid-cols-12 md:gap-24">
           <div className="md:col-span-5">
-            <img src={heart} alt="YUI studio" className="w-full object-cover" />
+            <img src={aboutApron} alt="YUI studio — slow craft in the atelier" className="aspect-[3/4] w-full object-cover" />
           </div>
           <div className="md:col-span-7 md:pt-12">
             <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
@@ -86,8 +86,16 @@ function AboutPage() {
       >
         <div className="absolute inset-0 bg-[color:var(--ivory)]/70" style={{ mixBlendMode: "lighten" }} />
         <div className="relative mx-auto grid max-w-[1400px] gap-6 md:grid-cols-2 md:gap-10">
-          <img src={ocean} alt="" className="h-[520px] w-full object-cover" />
-          <img src={strawberry} alt="" className="h-[520px] w-full object-cover md:translate-y-16" />
+          <img
+            src={aboutMuscat}
+            alt="Shine muscat cheesecake with violet pastry"
+            className="aspect-square w-full object-cover"
+          />
+          <img
+            src={aboutStrawberry}
+            alt="Strawberry creations in soft daylight"
+            className="aspect-square w-full object-cover md:translate-y-16"
+          />
         </div>
       </section>
 
