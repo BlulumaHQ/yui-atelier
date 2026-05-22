@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { Instagram, Mail, MapPin, Clock } from "lucide-react";
+import bgFoliage from "@/assets/bg-foliage-shadow.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -21,8 +22,12 @@ export const Route = createFileRoute("/contact")({
 function ContactPage() {
   return (
     <SiteLayout>
-      <section className="bg-[color:var(--cream)] px-6 pb-24 pt-40 md:px-12 md:pt-48">
-        <div className="mx-auto max-w-[1400px]">
+      <section
+        className="relative bg-[color:var(--cream)] bg-cover bg-center bg-no-repeat px-6 pb-24 pt-40 md:px-12 md:pt-48"
+        style={{ backgroundImage: `url(${bgFoliage})` }}
+      >
+        <div className="absolute inset-0 bg-[color:var(--cream)]/75" />
+        <div className="relative mx-auto max-w-[1400px]">
           <p className="font-jp text-xs tracking-[0.5em] text-muted-foreground">
             お問い合わせ
           </p>

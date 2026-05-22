@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { products } from "@/lib/products";
+import bgWaves from "@/assets/bg-waves.jpg";
 
 export const Route = createFileRoute("/collection")({
   head: () => ({
@@ -21,8 +22,12 @@ export const Route = createFileRoute("/collection")({
 function CollectionPage() {
   return (
     <SiteLayout>
-      <section className="bg-background px-6 pb-16 pt-40 md:px-12 md:pt-48">
-        <div className="mx-auto max-w-[1500px]">
+      <section
+        className="relative bg-background bg-cover bg-center bg-no-repeat px-6 pb-16 pt-40 md:px-12 md:pt-48"
+        style={{ backgroundImage: `url(${bgWaves})` }}
+      >
+        <div className="absolute inset-0 bg-background/75" />
+        <div className="relative mx-auto max-w-[1500px]">
           <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
             The Collection · 2026
           </p>
