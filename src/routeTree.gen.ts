@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as OrderingRouteImport } from './routes/ordering'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CollectionRouteImport } from './routes/collection'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -23,6 +24,11 @@ const OrderingRoute = OrderingRouteImport.update({
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CollectionRoute = CollectionRouteImport.update({
@@ -45,6 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/collection': typeof CollectionRoute
+  '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/ordering': typeof OrderingRoute
 }
@@ -52,6 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/collection': typeof CollectionRoute
+  '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/ordering': typeof OrderingRoute
 }
@@ -60,21 +68,36 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/collection': typeof CollectionRoute
+  '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/ordering': typeof OrderingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/collection' | '/gallery' | '/ordering'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/collection'
+    | '/contact'
+    | '/gallery'
+    | '/ordering'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/collection' | '/gallery' | '/ordering'
-  id: '__root__' | '/' | '/about' | '/collection' | '/gallery' | '/ordering'
+  to: '/' | '/about' | '/collection' | '/contact' | '/gallery' | '/ordering'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/collection'
+    | '/contact'
+    | '/gallery'
+    | '/ordering'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   CollectionRoute: typeof CollectionRoute
+  ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
   OrderingRoute: typeof OrderingRoute
 }
@@ -93,6 +116,13 @@ declare module '@tanstack/react-router' {
       path: '/gallery'
       fullPath: '/gallery'
       preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/collection': {
@@ -123,6 +153,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CollectionRoute: CollectionRoute,
+  ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
   OrderingRoute: OrderingRoute,
 }
