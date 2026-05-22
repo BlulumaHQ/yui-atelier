@@ -75,6 +75,7 @@ function OrderingPage() {
         </div>
       </section>
 
+      <AtelierBanner />
       <InquiryForm />
     </SiteLayout>
   );
