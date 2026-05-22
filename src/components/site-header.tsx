@@ -98,7 +98,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
 
       {/* Mobile sheet */}
       <div
-        className={`fixed inset-0 z-50 bg-background transition-opacity duration-500 md:hidden ${
+        className={`fixed inset-0 z-50 bg-[color:var(--cream)] transition-opacity duration-500 md:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
