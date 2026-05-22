@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as OrderingRouteImport } from './routes/ordering'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as CollectionRouteImport } from './routes/collection'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -17,6 +18,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const OrderingRoute = OrderingRouteImport.update({
   id: '/ordering',
   path: '/ordering',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CollectionRoute = CollectionRouteImport.update({
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/collection': typeof CollectionRoute
+  '/gallery': typeof GalleryRoute
   '/ordering': typeof OrderingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/collection': typeof CollectionRoute
+  '/gallery': typeof GalleryRoute
   '/ordering': typeof OrderingRoute
 }
 export interface FileRoutesById {
@@ -52,20 +60,22 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/collection': typeof CollectionRoute
+  '/gallery': typeof GalleryRoute
   '/ordering': typeof OrderingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/collection' | '/ordering'
+  fullPaths: '/' | '/about' | '/collection' | '/gallery' | '/ordering'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/collection' | '/ordering'
-  id: '__root__' | '/' | '/about' | '/collection' | '/ordering'
+  to: '/' | '/about' | '/collection' | '/gallery' | '/ordering'
+  id: '__root__' | '/' | '/about' | '/collection' | '/gallery' | '/ordering'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   CollectionRoute: typeof CollectionRoute
+  GalleryRoute: typeof GalleryRoute
   OrderingRoute: typeof OrderingRoute
 }
 
@@ -76,6 +86,13 @@ declare module '@tanstack/react-router' {
       path: '/ordering'
       fullPath: '/ordering'
       preLoaderRoute: typeof OrderingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/collection': {
@@ -106,6 +123,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CollectionRoute: CollectionRoute,
+  GalleryRoute: GalleryRoute,
   OrderingRoute: OrderingRoute,
 }
 export const routeTree = rootRouteImport
