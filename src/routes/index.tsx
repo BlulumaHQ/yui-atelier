@@ -112,11 +112,11 @@ function Home() {
                   <div
                     className={`md:col-span-7 ${reverse ? "md:order-2" : ""}`}
                   >
-                    <div className="overflow-hidden bg-background">
+                    <div className="flex items-center justify-center bg-[color:var(--cream)]/40 p-4 md:p-8">
                       <img
                         src={p.image}
                         alt={p.name}
-                        className="h-[500px] w-full object-cover transition-transform duration-[1400ms] ease-out hover:scale-105 md:h-[640px]"
+                        className="max-h-[640px] w-full object-contain transition-transform duration-[1400ms] ease-out hover:scale-[1.03]"
                       />
                     </div>
                   </div>
