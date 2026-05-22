@@ -88,6 +88,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@yui.living" },
+      { name: "twitter:title", content: "YUI — Boutique Dessert Studio" },
+      { name: "description", content: "YUI is a boutique dessert studio website showcasing handcrafted, artistic cakes and desserts." },
+      { property: "og:description", content: "YUI is a boutique dessert studio website showcasing handcrafted, artistic cakes and desserts." },
+      { name: "twitter:description", content: "YUI is a boutique dessert studio website showcasing handcrafted, artistic cakes and desserts." },
     ],
     links: [
       {
