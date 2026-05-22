@@ -3,6 +3,8 @@ import { SiteLayout } from "@/components/site-layout";
 import heart from "@/assets/hero-heart.webp";
 import ocean from "@/assets/hero-ocean.webp";
 import strawberry from "@/assets/product-strawberry-cake.webp";
+import bgFoliage from "@/assets/bg-foliage-shadow.jpg";
+import bgWaves from "@/assets/bg-waves.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -23,8 +25,12 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <SiteLayout>
-      <section className="bg-[color:var(--cream)] px-6 pb-24 pt-40 md:px-12 md:pt-48">
-        <div className="mx-auto max-w-[1400px]">
+      <section
+        className="relative bg-[color:var(--cream)] bg-cover bg-center bg-no-repeat px-6 pb-24 pt-40 md:px-12 md:pt-48"
+        style={{ backgroundImage: `url(${bgFoliage})` }}
+      >
+        <div className="absolute inset-0 bg-[color:var(--cream)]/75" />
+        <div className="relative mx-auto max-w-[1400px]">
           <p className="font-jp text-xs tracking-[0.5em] text-muted-foreground">結 · YUI</p>
           <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.05] text-foreground md:text-8xl">
             A little beauty, brought into everyday life —{" "}
@@ -74,8 +80,12 @@ function AboutPage() {
       </section>
 
       {/* Twin imagery */}
-      <section className="bg-[color:var(--ivory)] px-6 py-24 md:px-12">
-        <div className="mx-auto grid max-w-[1400px] gap-6 md:grid-cols-2 md:gap-10">
+      <section
+        className="relative bg-[color:var(--ivory)] bg-cover bg-center bg-no-repeat px-6 py-24 md:px-12"
+        style={{ backgroundImage: `url(${bgWaves})` }}
+      >
+        <div className="absolute inset-0 bg-[color:var(--ivory)]/70" style={{ mixBlendMode: "lighten" }} />
+        <div className="relative mx-auto grid max-w-[1400px] gap-6 md:grid-cols-2 md:gap-10">
           <img src={ocean} alt="" className="h-[520px] w-full object-cover" />
           <img src={strawberry} alt="" className="h-[520px] w-full object-cover md:translate-y-16" />
         </div>
