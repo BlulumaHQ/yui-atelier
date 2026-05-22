@@ -1,22 +1,28 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
+import logoYui from "@/assets/logo-yui-full.png";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border/50 bg-[color:var(--cream)]">
-      <div className="mx-auto max-w-[1600px] px-6 py-20 md:px-12">
-        <div className="grid gap-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
-          <div>
-            <div className="font-serif text-3xl tracking-[0.4em]">YUI</div>
-            <p className="mt-2 text-[10px] uppercase tracking-luxe text-muted-foreground">
-              pâtisserie studio
-            </p>
-            <p className="mt-8 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              A boutique dessert studio inspired by beauty, seasonality, and thoughtful
-              craftsmanship — made for slow living.
-            </p>
-          </div>
+    <footer className="relative border-t border-border/40 bg-[color:var(--ivory)]">
+      {/* Top brand band */}
+      <div className="border-b border-border/30">
+        <div className="mx-auto flex max-w-[1600px] flex-col items-center px-6 py-16 text-center md:px-12 md:py-20">
+          <img
+            src={logoYui}
+            alt="YUI Pâtisserie Studio"
+            className="h-40 w-auto opacity-90 md:h-48"
+          />
+          <p className="mt-6 max-w-md text-sm font-light leading-relaxed text-muted-foreground">
+            A boutique dessert studio inspired by beauty, seasonality, and thoughtful
+            craftsmanship — made for slow living.
+          </p>
+        </div>
+      </div>
 
+      {/* Columns */}
+      <div className="mx-auto max-w-[1500px] px-6 py-20 md:px-12">
+        <div className="grid gap-14 md:grid-cols-4">
           <FooterCol
             title="Studio"
             links={[
@@ -32,20 +38,44 @@ export function SiteFooter() {
               { to: "/gallery", label: "Gallery" },
             ]}
           />
-
           <div>
             <h4 className="text-[10px] uppercase tracking-luxe text-muted-foreground">
-              Follow
+              Atelier
             </h4>
-            <a
-              href="https://www.instagram.com/yui.living"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 text-sm text-foreground hover:text-primary"
-            >
-              <Instagram className="h-4 w-4" strokeWidth={1.25} />
-              @yui.living
-            </a>
+            <p className="mt-6 text-sm leading-relaxed text-foreground/80">
+              By appointment only
+              <br />
+              Tuesday — Saturday
+              <br />
+              10:00 — 18:00
+            </p>
+          </div>
+          <div>
+            <h4 className="text-[10px] uppercase tracking-luxe text-muted-foreground">
+              Contact
+            </h4>
+            <ul className="mt-6 space-y-3 text-sm">
+              <li>
+                <a
+                  href="mailto:hello@yui.studio"
+                  className="inline-flex items-center gap-2 text-foreground hover:text-primary"
+                >
+                  <Mail className="h-3.5 w-3.5" strokeWidth={1.25} />
+                  hello@yui.studio
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/yui.living"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-foreground hover:text-primary"
+                >
+                  <Instagram className="h-3.5 w-3.5" strokeWidth={1.25} />
+                  @yui.living
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -53,8 +83,11 @@ export function SiteFooter() {
 
         <div className="mt-8 flex flex-col items-start justify-between gap-3 text-[11px] uppercase tracking-editorial text-muted-foreground md:flex-row md:items-center">
           <p>
-            © 2026 YUI. All rights reserved. |{" "}
-            <span className="normal-case tracking-normal">Web Design by </span>
+            © 2026 YUI Pâtisserie Studio · All rights reserved
+          </p>
+          <p className="font-jp text-[10px] tracking-[0.4em]">やさしい時間のために</p>
+          <p className="normal-case tracking-normal">
+            Web Design by{" "}
             <a
               href="https://bluluma.com"
               target="_blank"
@@ -64,7 +97,6 @@ export function SiteFooter() {
               Bluluma
             </a>
           </p>
-          <p className="font-jp text-[10px] tracking-widest">やさしい時間のために</p>
         </div>
       </div>
     </footer>
