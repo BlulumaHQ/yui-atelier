@@ -6,6 +6,7 @@ import { Instagram } from "lucide-react";
 import bgFoliage from "@/assets/bg-foliage-shadow.jpg";
 import bgWaves from "@/assets/bg-waves.jpg";
 import bgDark from "@/assets/bg-dark-texture.jpg";
+import aboutApron from "@/assets/about-apron.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -157,7 +158,7 @@ function Home() {
         <div className="mx-auto grid max-w-[1400px] gap-16 md:grid-cols-2 md:gap-24">
           <div className="relative">
             <img
-              src={products[0].image}
+              src={aboutApron}
               alt="YUI Atelier"
               className="h-[560px] w-full object-cover"
             />

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { Instagram, Mail, MapPin, Clock } from "lucide-react";
 import bgFoliage from "@/assets/bg-foliage-shadow.jpg";
+import bgBaking from "@/assets/bg-baking-banner.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -106,6 +107,31 @@ function ContactPage() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* Atelier banner */}
+      <section
+        className="relative bg-[color:var(--cream)] bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgBaking})`, backgroundSize: "cover" }}
+      >
+        <div
+          className="absolute inset-0 bg-[color:var(--cream)]/55"
+          style={{ mixBlendMode: "multiply" }}
+        />
+        <div className="absolute inset-0 bg-[color:var(--ivory)]/35" />
+        <div className="relative mx-auto flex max-w-[1300px] flex-col items-center px-6 py-32 text-center md:px-12 md:py-44">
+          <p className="font-jp text-xs tracking-[0.5em] text-foreground/70">
+            アトリエより
+          </p>
+          <h2 className="mt-8 max-w-3xl font-serif text-4xl leading-tight text-foreground md:text-6xl">
+            Made slowly, by hand — from the simplest ingredients.
+          </h2>
+          <div className="mt-8 h-px w-12 bg-foreground/40" />
+          <p className="mt-8 max-w-xl text-base font-light leading-relaxed text-foreground/75">
+            Flour, butter, cream, fruit in season. Every YUI creation begins on the
+            marble counter, shaped with patience and a quiet attention to detail.
+          </p>
         </div>
       </section>
     </SiteLayout>
