@@ -7,13 +7,13 @@ export function SiteFooter() {
     <footer className="relative border-t border-border/40 bg-[color:var(--ivory)]">
       {/* Top brand band */}
       <div className="border-b border-border/30">
-        <div className="mx-auto flex max-w-[1600px] flex-col items-center px-6 py-16 text-center md:px-12 md:py-20">
+        <div className="mx-auto flex max-w-[1600px] flex-col items-center px-6 py-10 text-center md:px-12 md:py-20">
           <img
             src={logoYui}
             alt="YUI Pâtisserie Studio"
-            className="h-40 w-auto opacity-90 md:h-48"
+            className="h-24 w-auto opacity-90 md:h-48"
           />
-          <p className="mt-6 max-w-md text-sm font-light leading-relaxed text-muted-foreground">
+          <p className="mt-4 max-w-md text-xs font-light leading-relaxed text-muted-foreground md:mt-6 md:text-sm">
             A boutique dessert studio inspired by beauty, seasonality, and thoughtful
             craftsmanship — made for slow living.
           </p>
@@ -21,8 +21,8 @@ export function SiteFooter() {
       </div>
 
       {/* Columns */}
-      <div className="mx-auto max-w-[1500px] px-6 py-20 md:px-12">
-        <div className="grid gap-14 md:grid-cols-4">
+      <div className="mx-auto max-w-[1500px] px-6 py-10 md:px-12 md:py-20">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-14">
           <FooterCol
             title="Studio"
             links={[
@@ -41,7 +41,7 @@ export function SiteFooter() {
             <h4 className="text-[10px] uppercase tracking-luxe text-muted-foreground">
               Atelier
             </h4>
-            <p className="mt-6 text-sm leading-relaxed text-foreground/80">
+            <p className="mt-4 text-sm leading-relaxed text-foreground/80 md:mt-6">
               By appointment only
               <br />
               Tuesday — Saturday
@@ -53,7 +53,7 @@ export function SiteFooter() {
             <h4 className="text-[10px] uppercase tracking-luxe text-muted-foreground">
               Contact
             </h4>
-            <ul className="mt-6 space-y-3 text-sm">
+            <ul className="mt-4 space-y-3 text-sm md:mt-6">
               <li>
                 <a
                   href="mailto:hello@yui.studio"
@@ -78,9 +78,9 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="yui-rule mt-20" />
+        <div className="yui-rule mt-10 md:mt-20" />
 
-        <div className="mt-8 flex flex-col items-start justify-between gap-3 text-[11px] uppercase tracking-editorial text-muted-foreground md:flex-row md:items-center">
+        <div className="mt-6 flex flex-col items-center justify-between gap-3 text-center text-[10px] uppercase tracking-editorial text-muted-foreground md:mt-8 md:flex-row md:items-center md:text-left md:text-[11px]">
           <p>
             © 2026 YUI Pâtisserie Studio · All rights reserved
           </p>
@@ -112,7 +112,7 @@ function FooterCol({
   return (
     <div>
       <h4 className="text-[10px] uppercase tracking-luxe text-muted-foreground">{title}</h4>
-      <ul className="mt-6 space-y-3">
+      <ul className="mt-4 space-y-3 md:mt-6">
         {links.map((l) => (
           <li key={l.to}>
             <Link to={l.to} className="text-sm text-foreground hover:text-primary">
