@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as OrderingRouteImport } from './routes/ordering'
 import { Route as CollectionRouteImport } from './routes/collection'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const OrderingRoute = OrderingRouteImport.update({
+  id: '/ordering',
+  path: '/ordering',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CollectionRoute = CollectionRouteImport.update({
   id: '/collection',
   path: '/collection',
@@ -33,34 +39,45 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/collection': typeof CollectionRoute
+  '/ordering': typeof OrderingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/collection': typeof CollectionRoute
+  '/ordering': typeof OrderingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/collection': typeof CollectionRoute
+  '/ordering': typeof OrderingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/collection'
+  fullPaths: '/' | '/about' | '/collection' | '/ordering'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/collection'
-  id: '__root__' | '/' | '/about' | '/collection'
+  to: '/' | '/about' | '/collection' | '/ordering'
+  id: '__root__' | '/' | '/about' | '/collection' | '/ordering'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   CollectionRoute: typeof CollectionRoute
+  OrderingRoute: typeof OrderingRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/ordering': {
+      id: '/ordering'
+      path: '/ordering'
+      fullPath: '/ordering'
+      preLoaderRoute: typeof OrderingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/collection': {
       id: '/collection'
       path: '/collection'
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CollectionRoute: CollectionRoute,
+  OrderingRoute: OrderingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
