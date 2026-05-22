@@ -45,7 +45,7 @@ const steps = [
 function OrderingPage() {
   return (
     <SiteLayout>
-      <section className="bg-paper px-6 pb-16 pt-40 md:px-12 md:pt-48">
+      <section className="bg-background px-6 pb-16 pt-40 md:px-12 md:pt-48">
         <div className="mx-auto max-w-[1400px]">
           <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
             Ordering — Private Consultation
@@ -56,7 +56,7 @@ function OrderingPage() {
         </div>
       </section>
 
-      <section className="bg-paper-cream px-6 py-28 md:px-12">
+      <section className="bg-[color:var(--cream)] px-6 py-28 md:px-12">
         <div className="mx-auto max-w-[1400px]">
           <div className="grid gap-12 md:grid-cols-4">
             {steps.map((s) => (
@@ -82,7 +82,7 @@ function OrderingPage() {
 function InquiryForm() {
   const [sending, setSending] = useState(false);
   return (
-    <section className="bg-leaf-mist px-6 py-32 md:px-12">
+    <section className="bg-background px-6 py-32 md:px-12">
       <div className="mx-auto grid max-w-[1300px] gap-16 md:grid-cols-2 md:gap-24">
         <div>
           <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">

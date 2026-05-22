@@ -21,7 +21,7 @@ export const Route = createFileRoute("/contact")({
 function ContactPage() {
   return (
     <SiteLayout>
-      <section className="bg-paper-cream px-6 pb-24 pt-40 md:px-12 md:pt-48">
+      <section className="bg-[color:var(--cream)] px-6 pb-24 pt-40 md:px-12 md:pt-48">
         <div className="mx-auto max-w-[1400px]">
           <p className="font-jp text-xs tracking-[0.5em] text-muted-foreground">
             お問い合わせ
@@ -36,7 +36,7 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-paper px-6 py-32 md:px-12">
+      <section className="bg-background px-6 py-32 md:px-12">
         <div className="mx-auto grid max-w-[1300px] gap-16 md:grid-cols-3">
           {[
             {

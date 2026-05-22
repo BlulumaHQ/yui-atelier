@@ -23,7 +23,7 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <SiteLayout>
-      <section className="bg-paper-cream px-6 pb-24 pt-40 md:px-12 md:pt-48">
+      <section className="bg-[color:var(--cream)] px-6 pb-24 pt-40 md:px-12 md:pt-48">
         <div className="mx-auto max-w-[1400px]">
           <p className="font-jp text-xs tracking-[0.5em] text-muted-foreground">結 · YUI</p>
           <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.05] text-foreground md:text-8xl">
@@ -33,7 +33,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-paper px-6 py-32 md:px-12">
+      <section className="bg-background px-6 py-32 md:px-12">
         <div className="mx-auto grid max-w-[1400px] gap-16 md:grid-cols-12 md:gap-24">
           <div className="md:col-span-5">
             <img src={heart} alt="YUI studio" className="w-full object-cover" />
@@ -74,7 +74,7 @@ function AboutPage() {
       </section>
 
       {/* Twin imagery */}
-      <section className="bg-paper-sakura px-6 py-24 md:px-12">
+      <section className="bg-[color:var(--ivory)] px-6 py-24 md:px-12">
         <div className="mx-auto grid max-w-[1400px] gap-6 md:grid-cols-2 md:gap-10">
           <img src={ocean} alt="" className="h-[520px] w-full object-cover" />
           <img src={strawberry} alt="" className="h-[520px] w-full object-cover md:translate-y-16" />
@@ -82,7 +82,7 @@ function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-leaf-mist px-6 py-32 md:px-12">
+      <section className="bg-background px-6 py-32 md:px-12">
         <div className="mx-auto max-w-[1400px]">
           <p className="text-[10px] uppercase tracking-luxe text-muted-foreground text-center">
             Our Philosophy
