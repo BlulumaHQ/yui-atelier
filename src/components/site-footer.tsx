@@ -35,7 +35,6 @@ export function SiteFooter() {
             title="Discover"
             links={[
               { to: "/collection", label: "Collection" },
-              { to: "/gallery", label: "Gallery" },
             ]}
           />
           <div>
