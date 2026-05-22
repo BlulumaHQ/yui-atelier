@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { toast } from "sonner";
+import orderingApron from "@/assets/ordering-apron-whisk.png";
 
 export const Route = createFileRoute("/ordering")({
   head: () => ({
@@ -76,6 +77,41 @@ function OrderingPage() {
 
       <InquiryForm />
     </SiteLayout>
+  );
+}
+
+function AtelierBanner() {
+  return (
+    <section className="relative overflow-hidden bg-[color:var(--cream)] px-6 py-24 md:px-12">
+      <div className="mx-auto grid max-w-[1400px] items-center gap-12 md:grid-cols-12">
+        <div className="md:col-span-7">
+          <div className="overflow-hidden rounded-sm shadow-[0_30px_80px_-40px_rgba(70,30,30,0.35)]">
+            <img
+              src={orderingApron}
+              alt="YUI baker whisking batter in a rose-toned atelier"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div className="md:col-span-5 md:pl-6">
+          <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
+            From Our Atelier
+          </p>
+          <h2 className="mt-6 font-serif text-4xl leading-[1.1] text-foreground md:text-5xl">
+            Made by hand,<br />for slow living.
+          </h2>
+          <div className="mt-8 h-px w-12 bg-foreground/30" />
+          <p className="mt-8 max-w-md text-sm leading-relaxed text-muted-foreground">
+            每一份甜點，從打蛋、攪拌到烘烤，皆由我們親手完成。
+            選用當季食材與溫柔工藝，為你保留生活裡最細膩的甜。
+          </p>
+          <p className="mt-6 font-serif text-lg italic text-foreground/80">
+             — made for slow living
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 
