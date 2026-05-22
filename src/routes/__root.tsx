@@ -92,6 +92,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "YUI is a boutique dessert studio website showcasing handcrafted, artistic cakes and desserts." },
       { property: "og:description", content: "YUI is a boutique dessert studio website showcasing handcrafted, artistic cakes and desserts." },
       { name: "twitter:description", content: "YUI is a boutique dessert studio website showcasing handcrafted, artistic cakes and desserts." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/bCCMipaZMMgU3uzBQ48gKBgft2r2/social-images/social-1779482353963-ChatGPT_Image_May_22,_2026,_01_38_54_PM.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/bCCMipaZMMgU3uzBQ48gKBgft2r2/social-images/social-1779482353963-ChatGPT_Image_May_22,_2026,_01_38_54_PM.webp" },
     ],
     links: [
       {
