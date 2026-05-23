@@ -38,12 +38,12 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
             : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-6 md:px-12">
+      <div className="mx-auto flex h-24 max-w-[1600px] items-center justify-between px-6 md:px-12 md:h-32">
         <Link to="/" className="flex items-center" aria-label="YUI — yuiliving.ca">
           <img
             src={logoHorizontal}
             alt="YUI — curated for slow living"
-            className={`h-14 w-auto md:h-20 transition-all ${
+            className={`h-16 w-auto md:h-24 transition-all ${
               solid ? "" : "brightness-0 invert"
             }`}
           />
@@ -93,8 +93,8 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
 
       {open && (
         <div className="fixed inset-0 z-[999] h-dvh w-dvw overflow-y-auto bg-transparent backdrop-blur-2xl md:hidden">
-          <div className="flex h-20 items-center justify-between px-6">
-            <img src={logoHorizontal} alt="YUI" className="h-14 w-auto" />
+          <div className="flex h-24 items-center justify-between px-6">
+            <img src={logoHorizontal} alt="YUI" className="h-16 w-auto" />
             <button onClick={() => setOpen(false)} aria-label="Close" className="text-foreground">
               <X className="h-5 w-5" strokeWidth={1.25} />
             </button>
