@@ -47,6 +47,17 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
               solid ? "" : "brightness-0 invert"
             }`}
           />
+          <span
+            className={`ml-4 hidden items-center md:flex ${
+              solid ? "text-brand" : "text-white/90"
+            }`}
+          >
+            <span aria-hidden className="mr-4 h-8 w-px bg-current opacity-40" />
+            <span className="flex flex-col gap-1 text-[10px] uppercase tracking-editorial leading-tight">
+              <span>Curated for Slow Living</span>
+              <span className="opacity-80">Cake · Tea · Home Decor</span>
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
