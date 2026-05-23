@@ -43,7 +43,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           <img
             src={logoHorizontal}
             alt="YUI — curated for slow living"
-            className={`h-20 w-auto md:h-28 transition-all ${
+            className={`h-10 w-auto md:h-14 transition-all ${
               solid ? "" : "brightness-0 invert"
             }`}
           />
