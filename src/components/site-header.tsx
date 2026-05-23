@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Instagram, Menu, X } from "lucide-react";
-import logo from "@/assets/logo-yui.png";
+import logoHorizontal from "@/assets/logo-yui-horizontal.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -39,21 +39,14 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
       }`}
     >
       <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-6 md:px-12">
-        <Link to="/" className="flex items-center gap-3">
-          <span
-            className={`font-serif text-2xl tracking-[0.4em] transition-colors ${
-              solid ? "text-foreground" : "text-white"
+        <Link to="/" className="flex items-center" aria-label="YUI — yuiliving.ca">
+          <img
+            src={logoHorizontal}
+            alt="YUI — curated for slow living"
+            className={`h-8 w-auto md:h-10 transition-all ${
+              solid ? "" : "brightness-0 invert"
             }`}
-          >
-            YUI
-          </span>
-          <span
-            className={`hidden text-[10px] uppercase tracking-luxe md:inline ${
-              solid ? "text-muted-foreground" : "text-white/80"
-            }`}
-          >
-            pâtisserie studio
-          </span>
+          />
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
@@ -101,7 +94,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
       {open && (
         <div className="fixed inset-0 z-[999] h-dvh w-dvw overflow-y-auto bg-menu-background md:hidden">
           <div className="flex h-20 items-center justify-between px-6">
-            <span className="font-serif text-2xl tracking-[0.4em] text-foreground">YUI</span>
+            <img src={logoHorizontal} alt="YUI" className="h-8 w-auto" />
             <button onClick={() => setOpen(false)} aria-label="Close" className="text-foreground">
               <X className="h-5 w-5" strokeWidth={1.25} />
             </button>

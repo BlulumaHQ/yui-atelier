@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Mail } from "lucide-react";
-import logoYui from "@/assets/logo-yui-full.png";
+import logoYui from "@/assets/logo-yui-square.png";
 
 export function SiteFooter() {
   return (
