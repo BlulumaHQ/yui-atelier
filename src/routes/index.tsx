@@ -50,7 +50,7 @@ function Home() {
       </section>
 
       {/* Featured Seasonal Collection */}
-      <section className="bg-background px-6 py-28 md:px-12">
+      <section className="bg-white px-6 py-28 md:px-12">
         <div className="mx-auto max-w-[1500px]">
           <SectionHeader
             eyebrow="Seasonal Collection"
@@ -154,7 +154,7 @@ function Home() {
       </section>
 
       {/* About YUI */}
-      <section className="bg-background px-6 py-32 md:px-12">
+      <section className="bg-white px-6 py-32 md:px-12">
         <div className="mx-auto grid max-w-[1400px] gap-16 md:grid-cols-2 md:gap-24">
           <div className="relative">
             <img
