@@ -60,6 +60,7 @@
   --color-lavender: var(--lavender);
   --color-blueberry: var(--blueberry);
   --color-clay: var(--clay);
+  --color-brand: var(--brand);
   --color-menu-background: var(--menu-background);
   --font-serif: "Cormorant Garamond", "Noto Serif JP", serif;
   --font-sans: "Jost", "Noto Serif JP", system-ui, sans-serif;
@@ -76,19 +77,19 @@
   --popover: oklch(0.99 0.004 70);
   --popover-foreground: oklch(0.28 0.015 60);
   /* Sage as primary — quiet luxury */
-  --primary: oklch(0.42 0.025 130);
+  --primary: oklch(0.42 0.035 125);
   --primary-foreground: oklch(0.985 0.005 70);
   --secondary: oklch(0.95 0.012 30);
   --secondary-foreground: oklch(0.32 0.02 60);
   --muted: oklch(0.955 0.008 60);
-  --muted-foreground: oklch(0.52 0.015 60);
+  --muted-foreground: oklch(0.42 0.035 125);
   --accent: oklch(0.92 0.025 20);
-  --accent-foreground: oklch(0.32 0.02 60);
+  --accent-foreground: oklch(0.42 0.035 125);
   --destructive: oklch(0.55 0.18 25);
   --destructive-foreground: oklch(0.985 0.005 70);
-  --border: oklch(0.9 0.01 60);
-  --input: oklch(0.92 0.01 60);
-  --ring: oklch(0.55 0.025 130);
+  --border: oklch(0.42 0.035 125 / 0.25);
+  --input: oklch(0.42 0.035 125 / 0.25);
+  --ring: oklch(0.42 0.035 125);
 
   /* YUI seasonal palette */
   --blush: oklch(0.88 0.04 20);
@@ -96,7 +97,8 @@
   --cream: oklch(0.965 0.012 80);
   --ivory: oklch(0.985 0.005 70);
   --menu-background: oklch(1 0 0);
-  --sage: oklch(0.62 0.03 130);
+  --sage: oklch(0.42 0.035 125);
+  --brand: oklch(0.42 0.035 125);
   --lavender: oklch(0.82 0.04 295);
   --blueberry: oklch(0.38 0.08 265);
   --clay: oklch(0.62 0.04 50);
