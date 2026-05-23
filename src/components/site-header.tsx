@@ -32,7 +32,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
         open
-          ? "bg-menu-background"
+          ? "bg-transparent"
           : solid
             ? "bg-background/75 backdrop-blur-xl border-b border-border/40"
             : "bg-transparent"
@@ -43,7 +43,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           <img
             src={logoHorizontal}
             alt="YUI — curated for slow living"
-            className={`h-8 w-auto md:h-10 transition-all ${
+            className={`h-14 w-auto md:h-20 transition-all ${
               solid ? "" : "brightness-0 invert"
             }`}
           />
@@ -92,9 +92,9 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-[999] h-dvh w-dvw overflow-y-auto bg-menu-background md:hidden">
+        <div className="fixed inset-0 z-[999] h-dvh w-dvw overflow-y-auto bg-transparent backdrop-blur-2xl md:hidden">
           <div className="flex h-20 items-center justify-between px-6">
-            <img src={logoHorizontal} alt="YUI" className="h-8 w-auto" />
+            <img src={logoHorizontal} alt="YUI" className="h-14 w-auto" />
             <button onClick={() => setOpen(false)} aria-label="Close" className="text-foreground">
               <X className="h-5 w-5" strokeWidth={1.25} />
             </button>

@@ -11,7 +11,7 @@ export function SiteFooter() {
           <img
             src={logoYui}
             alt="YUI Pâtisserie Studio"
-            className="h-24 w-auto opacity-90 md:h-48"
+            className="h-48 w-auto opacity-90 md:h-80"
           />
           <p className="mt-4 max-w-md text-xs font-light leading-relaxed text-muted-foreground md:mt-6 md:text-sm">
             A boutique dessert studio inspired by beauty, seasonality, and thoughtful
