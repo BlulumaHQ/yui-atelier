@@ -103,9 +103,9 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-[999] h-dvh w-dvw overflow-y-auto bg-transparent backdrop-blur-2xl md:hidden">
+        <div className="fixed inset-0 z-[999] h-dvh w-dvw overflow-y-auto bg-background md:hidden">
           <div className="flex h-24 items-center justify-between px-6">
-            <img src={logoHorizontal} alt="YUI" className="h-16 w-auto" />
+            <img src={logoHorizontal} alt="YUI" className="h-8 w-auto" />
             <button onClick={() => setOpen(false)} aria-label="Close" className="text-foreground">
               <X className="h-5 w-5" strokeWidth={1.25} />
             </button>
