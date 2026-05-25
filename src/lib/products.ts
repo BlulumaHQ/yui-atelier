@@ -6,6 +6,8 @@ import strawberryShortcake from "@/assets/product-strawberry-shortcake.webp";
 import shineMuscat from "@/assets/product-shine-muscat.webp";
 import strawberryLayered from "@/assets/product-strawberry-layered.webp";
 import mangoCream from "@/assets/product-mango-cream.webp";
+import oceanBreeze from "@/assets/product-ocean-breeze.webp";
+import berryCrumble from "@/assets/product-berry-crumble.webp";
 
 export type Product = {
   slug: string;
@@ -104,6 +106,28 @@ export const products: Product[] = [
       "Fresh mango cubes nestled on cloud-soft whipped cream above a tender vanilla sponge, scattered with petals.",
     season: "Summer",
     image: mangoCream,
+    category: "Signature",
+  },
+  {
+    slug: "ocean-breeze-mousse",
+    name: "Ocean Breeze Mousse Cake",
+    nameJp: "海洋微風慕斯蛋糕",
+    tagline: "Dreamy waves of mousse, as gentle as the sea breeze — a perfect harmony of freshness and sweetness.",
+    description:
+      "Hand-marbled aqua mirror glaze over silky mousse with a hidden berry core and a buttery cookie base.",
+    season: "Summer",
+    image: oceanBreeze,
+    category: "Mousse",
+  },
+  {
+    slug: "berry-crumble-cake",
+    name: "Berry Crumble Cake",
+    nameJp: "莓果雲朵蛋糕",
+    tagline: "Soft and fluffy cake topped with delicate crumbs, fresh berries, and a touch of sweetness.",
+    description:
+      "Pillowy sponge wrapped in fine vanilla crumb, crowned with fresh raspberries, blueberries, and sugar hearts.",
+    season: "Spring",
+    image: berryCrumble,
     category: "Signature",
   },
 ];
