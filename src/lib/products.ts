@@ -20,45 +20,11 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    slug: "taro-pudding-cake",
-    name: "Taro Pudding Cake",
-    nameJp: "芋泥布丁蛋糕",
-    tagline: "Creamy taro and silky pudding, a perfect blend of comfort and sweetness.",
-    description:
-      "Layers of vanilla sponge, taro mousse, and silky pudding crowned with hand-piped taro rosettes.",
-    season: "Autumn",
-    image: taroPudding,
-    category: "Signature",
-  },
-  {
-    slug: "geometric-heart-mousse",
-    name: "Geometric Heart Mousse",
-    nameJp: "幾何愛心慕斯",
-    tagline: "Silky mousse with a hint of fruitiness and delicate sweetness — like a bite of love.",
-    description:
-      "An architectural heart sculpted in silky raspberry mousse, dusted in red velvet, finished with edible gold leaf.",
-    season: "Spring",
-    image: heart,
-    category: "Signature",
-  },
-  {
-    slug: "blueberry-mirror-mousse",
-    name: "Blueberry Mirror Mousse",
-    nameJp: "藍莓鏡面慕斯",
-    tagline: "A delicate melt-in-your-mouth treat.",
-    description:
-      "Deep midnight glaze, brushed silver blossoms, tangy blueberry jam folded into a silken mousse.",
-    season: "All Season",
-    image: blueberry,
-    category: "Mousse",
-  },
-  {
     slug: "strawberry-cake",
     name: "Strawberry Cake",
     nameJp: "草莓蛋糕",
     tagline: "The perfect balance of sweet and tangy.",
-    description:
-      "Three tiers of vanilla sponge, fresh strawberries, and whipped cream beneath a glossy berry glaze.",
+    description: "Three tiers of vanilla sponge, fresh strawberries, and whipped cream beneath a glossy berry glaze.",
     season: "Spring",
     image: strawberryCake,
     category: "Signature",
