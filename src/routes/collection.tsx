@@ -35,7 +35,7 @@ function CollectionPage() {
             Seasonal creations from the YUI atelier.
           </h1>
           <p className="mt-8 max-w-xl text-base font-light leading-relaxed text-muted-foreground">
-            Ten signature desserts, designed in small editions and changing with the
+            Eleven signature desserts, designed in small editions and changing with the
             seasons. Each cake is handcrafted to order in our studio.
           </p>
         </div>
@@ -51,11 +51,11 @@ function CollectionPage() {
                 to="/ordering"
                 className={`group block ${idx % 2 === 1 ? "md:mt-24" : ""}`}
               >
-                <div className="overflow-hidden bg-[color:var(--cream)]">
+                <div className="flex aspect-square w-full items-center justify-center overflow-hidden bg-[color:var(--cream)]">
                   <img
                     src={p.image}
                     alt={p.name}
-                    className="h-[520px] w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105 md:h-[640px]"
+                    className="h-full w-full object-contain transition-transform duration-[1400ms] ease-out group-hover:scale-105"
                   />
                 </div>
                 <div className="mt-8 flex items-start justify-between gap-6">
