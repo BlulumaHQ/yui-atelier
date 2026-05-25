@@ -27,7 +27,16 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   const featured = products.slice(0, 3);
-  const signature = products;
+  const lookbookSlugs = [
+    "strawberry-cake",
+    "strawberry-shortcake",
+    "shine-muscat-cheesecake",
+    "strawberry-layered-cheesecake",
+    "mango-cream-cake",
+  ];
+  const signature = lookbookSlugs
+    .map((slug) => products.find((p) => p.slug === slug))
+    .filter((p): p is (typeof products)[number] => Boolean(p));
 
   return (
     <SiteLayout transparentHeader>
