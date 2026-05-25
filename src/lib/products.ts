@@ -8,6 +8,7 @@ import strawberryLayered from "@/assets/product-strawberry-layered.webp";
 import mangoCream from "@/assets/product-mango-cream.webp";
 import oceanBreeze from "@/assets/product-ocean-breeze.webp";
 import berryCrumble from "@/assets/product-berry-crumble.webp";
+import cherryCheesecake from "@/assets/product-cherry-cheesecake.webp";
 
 export type Product = {
   slug: string;
@@ -129,5 +130,16 @@ export const products: Product[] = [
     season: "Spring",
     image: berryCrumble,
     category: "Signature",
+  },
+  {
+    slug: "cherry-cheesecake",
+    name: "Cherry Cheesecake",
+    nameJp: "櫻桃凍乳酪蛋糕",
+    tagline: "Juicy cherries, creamy cheesecake, and a crisp cookie base — a perfect balance in every bite.",
+    description:
+      "Plump cherries set in glossy jelly above silky cheesecake mousse on a buttery cookie base.",
+    season: "Summer",
+    image: cherryCheesecake,
+    category: "Cheesecake",
   },
 ];
